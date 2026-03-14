@@ -1,13 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 
-
 const content = {
   ru: {
     brand: "Petshipping KZ",
+    subtitle: "Международная перевозка животных",
     navAbout: "О нас",
     navServices: "Услуги",
+    navSteps: "Этапы",
     navContact: "Контакты",
+    badge: "Тёплый семейный сервис",
     heroTitle: "Перевозим питомцев по миру спокойно, бережно и без хаоса",
     heroText:
       "Petshipping KZ помогает семьям безопасно перевозить домашних животных в любые страны. Документы, маршрут, сопровождение и поддержка — всё под контролем.",
@@ -15,7 +17,11 @@ const content = {
     heroButton2: "Смотреть услуги",
     aboutTitle: "Почему нам доверяют",
     aboutText:
-      "Для нас питомец — не просто груз. Мы понимаем, сколько тревоги бывает у семьи перед перелётом, поэтому помогаем пройти весь путь спокойно и по-человечески.",
+      "Для нас питомец — не просто груз. Мы понимаем, сколько тревоги бывает у семьи перед перелётом, поэтому помогаем пройти весь путь спокойно и понятно.",
+    trust1: "Поддержка на каждом этапе",
+    trust2: "Помощь с документами",
+    trust3: "Международные направления",
+    trust4: "Бережный подход к животным",
     servicesTitle: "Что мы делаем",
     services: [
       {
@@ -32,110 +38,95 @@ const content = {
       },
       {
         title: "Подготовка переноски",
-        text: "Подскажем, какая переноска подойдёт по размеру и требованиям перевозчика.",
+        text: "Подсказываем, какая переноска подойдёт по размеру и требованиям перевозчика.",
       },
       {
         title: "Сопровождение",
-        text: "Остаёмся на связи на всех этапах — от подготовки до прибытия.",
+        text: "Остаёмся на связи и ведём клиента от первого сообщения до прибытия питомца.",
       },
       {
-        title: "Под ключ",
-        text: "Берём на себя максимум организационных задач, чтобы вы не тонули в стрессе.",
+        title: "Консультации",
+        text: "Объясняем весь процесс простым языком без путаницы и лишнего стресса.",
       },
     ],
-    stepsTitle: "Как проходит процесс",
+    stepsTitle: "Как проходит работа",
     steps: [
-      {
-        title: "1. Консультация",
-        text: "Уточняем страну, сроки, вид животного и детали поездки.",
-      },
-      {
-        title: "2. Подготовка",
-        text: "Собираем список документов и помогаем всё подготовить без путаницы.",
-      },
-      {
-        title: "3. Перевозка",
-        text: "Организуем сам маршрут и сопровождаем до прибытия питомца.",
-      },
+      "Вы пишете нам в WhatsApp и рассказываете маршрут.",
+      "Мы уточняем детали и список нужных документов.",
+      "Подбираем безопасный план перевозки.",
+      "Сопровождаем процесс до прибытия питомца.",
     ],
-    trustTitle: "С заботой о каждом хвостатом пассажире",
-    trustText:
-      "Тёплый сервис, понятные шаги и реальная помощь — вот что должно чувствоваться на этом сайте.",
-    contactTitle: "Свяжитесь с нами",
+    contactTitle: "Связаться с нами",
     contactText:
-      "Напишите в WhatsApp или Instagram, чтобы обсудить маршрут, документы и перевозку вашего питомца.",
-    whatsapp: "WhatsApp",
+      "Если вам нужна перевозка животного по миру, напишите нам — поможем собрать всё по шагам.",
     instagram: "Instagram",
-    footer: "© Petshipping KZ • Международная перевозка животных",
+    whatsapp: "Написать в WhatsApp",
+    footer: "С заботой о питомцах и спокойствии их семей",
   },
   en: {
     brand: "Petshipping KZ",
+    subtitle: "International pet transportation",
     navAbout: "About",
     navServices: "Services",
+    navSteps: "Steps",
     navContact: "Contact",
-    heroTitle: "We relocate pets worldwide with care, calm, and full support",
+    badge: "Warm family-style service",
+    heroTitle: "We move pets around the world calmly, safely, and with care",
     heroText:
-      "Petshipping KZ helps families safely move their pets to any country. Documents, route planning, assistance, and support — all handled with care.",
-    heroButton: "Contact on WhatsApp",
+      "Petshipping KZ helps families transport pets internationally with confidence. Documents, route planning, support, and communication — all handled properly.",
+    heroButton: "Message on WhatsApp",
     heroButton2: "View services",
-    aboutTitle: "Why families trust us",
+    aboutTitle: "Why clients trust us",
     aboutText:
-      "For us, a pet is never just cargo. We understand how stressful relocation can feel, so we guide families through the entire process with clarity and care.",
+      "For us, a pet is never just cargo. We know how stressful relocation can be, so we help families go through the process clearly and calmly.",
+    trust1: "Support at every step",
+    trust2: "Document assistance",
+    trust3: "Worldwide routes",
+    trust4: "Gentle pet-first approach",
     servicesTitle: "What we do",
     services: [
       {
-        title: "International relocation",
-        text: "We organize pet transportation worldwide with country and airline requirements in mind.",
+        title: "International transportation",
+        text: "We organize pet transport to different countries with route and regulation planning.",
       },
       {
-        title: "Documentation",
-        text: "We help with certificates, veterinary papers, and all required documents.",
+        title: "Documents",
+        text: "We help with veterinary papers, certificates, and required travel documents.",
       },
       {
         title: "Route planning",
-        text: "We choose the safest and most convenient route for the pet and owner.",
+        text: "We select the safest and most practical route for the pet and the owner.",
       },
       {
-        title: "Carrier preparation",
-        text: "We help select a suitable carrier based on size and transport rules.",
+        title: "Crate preparation",
+        text: "We advise on suitable pet carriers according to size and airline requirements.",
       },
       {
-        title: "Full support",
-        text: "We stay in touch at every stage, from preparation to arrival.",
+        title: "Full guidance",
+        text: "We stay in touch from the first message until your pet arrives safely.",
       },
       {
-        title: "Turnkey service",
-        text: "We handle the hard parts so you do not have to deal with the stress alone.",
+        title: "Consultations",
+        text: "We explain the process clearly without confusion or unnecessary stress.",
       },
     ],
-    stepsTitle: "How it works",
+    stepsTitle: "How the process works",
     steps: [
-      {
-        title: "1. Consultation",
-        text: "We discuss the country, timing, pet type, and travel details.",
-      },
-      {
-        title: "2. Preparation",
-        text: "We guide you through documents and everything needed before departure.",
-      },
-      {
-        title: "3. Transportation",
-        text: "We organize the route and support you until your pet arrives.",
-      },
+      "You message us on WhatsApp and describe the route.",
+      "We clarify the details and required documents.",
+      "We prepare the safest transport plan.",
+      "We guide you until your pet arrives.",
     ],
-    trustTitle: "Caring for every furry passenger",
-    trustText:
-      "Warm service, clear steps, and real support — that is the feeling this website should give.",
     contactTitle: "Get in touch",
     contactText:
-      "Message us on WhatsApp or Instagram to discuss the route, documents, and relocation for your pet.",
-    whatsapp: "WhatsApp",
+      "If you need international pet transportation, message us and we’ll guide you step by step.",
     instagram: "Instagram",
-    footer: "© Petshipping KZ • International pet transportation",
+    whatsapp: "Message on WhatsApp",
+    footer: "With care for pets and peace of mind for their families",
   },
 };
 
-export default function App() {
+function App() {
   const [lang, setLang] = useState("ru");
   const t = content[lang];
 
@@ -146,17 +137,14 @@ export default function App() {
           <div className="logo">PKZ</div>
           <div>
             <div className="brand">{t.brand}</div>
-            <div className="brandSub">
-              {lang === "ru"
-                ? "Международная перевозка животных"
-                : "International pet relocation"}
-            </div>
+            <div className="brandSub">{t.subtitle}</div>
           </div>
         </div>
 
         <nav className="nav">
           <a href="#about">{t.navAbout}</a>
           <a href="#services">{t.navServices}</a>
+          <a href="#steps">{t.navSteps}</a>
           <a href="#contact">{t.navContact}</a>
         </nav>
 
@@ -178,12 +166,7 @@ export default function App() {
 
       <section className="hero">
         <div className="heroText">
-          <span className="badge">
-            {lang === "ru"
-              ? "Тёплый семейный сервис"
-              : "Warm family-centered service"}
-          </span>
-
+          <div className="badge">{t.badge}</div>
           <h1>{t.heroTitle}</h1>
           <p>{t.heroText}</p>
 
@@ -203,118 +186,101 @@ export default function App() {
         </div>
 
         <div className="heroVisual">
-          <div className="photo photoBig">
-            <img
-              src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1000&q=80"
-              alt="Dog"
-            />
-          </div>
-
-          <div className="photo photoSmall">
-            <img
-              src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&w=1000&q=80"
-              alt="Cat"
-            />
-          </div>
-
-          <div className="floatingCard">
-            <div className="floatingTitle">
-              {lang === "ru" ? "Все страны мира" : "Worldwide"}
+          <div className="card cardLarge">
+            <div className="pet petDog">🐶</div>
+            <div className="cardText">
+              <strong>Pet travel</strong>
+              <span>Safe, warm, organized</span>
             </div>
-            <div className="floatingText">
-              {lang === "ru"
-                ? "Документы, маршрут и сопровождение"
-                : "Documents, routing, and support"}
+          </div>
+
+          <div className="miniCards">
+            <div className="card">
+              <div className="pet">🐱</div>
+              <div className="cardText">
+                <strong>Documents</strong>
+                <span>Prepared clearly</span>
+              </div>
+            </div>
+            <div className="card">
+              <div className="pet">✈️</div>
+              <div className="cardText">
+                <strong>Routes</strong>
+                <span>Worldwide support</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="about">
-        <div className="sectionIntro">
-          <span>{lang === "ru" ? "О компании" : "About company"}</span>
+      <section className="sectionIntro" id="about">
+        <div className="sectionText">
           <h2>{t.aboutTitle}</h2>
-        </div>
-
-        <div className="aboutCard">
           <p>{t.aboutText}</p>
         </div>
-      </section>
 
-      <section id="services" className="services">
-        <div className="sectionIntro">
-          <span>{lang === "ru" ? "Услуги" : "Services"}</span>
-          <h2>{t.servicesTitle}</h2>
-        </div>
-
-        <div className="cardGrid">
-          {t.services.map((item, i) => (
-            <div className="serviceCard" key={i}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="steps">
-        <div className="sectionIntro">
-          <span>{lang === "ru" ? "Процесс" : "Process"}</span>
-          <h2>{t.stepsTitle}</h2>
-        </div>
-
-        <div className="stepsGrid">
-          {t.steps.map((item, i) => (
-            <div className="stepCard" key={i}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="trust">
         <div className="trustBox">
-          <div>
-            <span className="trustLabel">
-              {lang === "ru" ? "Почему это цепляет" : "Why it feels right"}
-            </span>
-            <h2>{t.trustTitle}</h2>
-            <p>{t.trustText}</p>
-          </div>
+          <div>{t.trust1}</div>
+          <div>{t.trust2}</div>
+          <div>{t.trust3}</div>
+          <div>{t.trust4}</div>
         </div>
       </section>
 
-      <section id="contact" className="contact">
-        <div className="sectionIntro">
-          <span>{lang === "ru" ? "Контакты" : "Contacts"}</span>
-          <h2>{t.contactTitle}</h2>
-        </div>
-
-        <div className="contactCard">
-          <p>{t.contactText}</p>
-          <div className="contactButtons">
-            <a
-              className="primaryBtn"
-              href="https://wa.me/77754828007"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t.whatsapp}
-            </a>
-            <a
-              className="secondaryBtn"
-              href="https://instagram.com/pet_shipping_kz"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t.instagram}
-            </a>
-          </div>
+      <section className="services" id="services">
+        <h2>{t.servicesTitle}</h2>
+        <div className="servicesGrid">
+          {t.services.map((item) => (
+            <div className="serviceCard" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <footer className="footer">{t.footer}</footer>
+      <section className="steps" id="steps">
+        <h2>{t.stepsTitle}</h2>
+        <div className="stepsGrid">
+          {t.steps.map((step, index) => (
+            <div className="stepCard" key={step}>
+              <div className="stepNumber">0{index + 1}</div>
+              <p>{step}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="contact" id="contact">
+        <h2>{t.contactTitle}</h2>
+        <p>{t.contactText}</p>
+
+        <div className="contactButtons">
+          <a
+            className="primaryBtn"
+            href="https://wa.me/77754828007"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t.whatsapp}
+          </a>
+          <a
+            className="secondaryBtn"
+            href="https://instagram.com/pet_shipping_kz"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t.instagram}
+          </a>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div>© Petshipping KZ</div>
+        <div>{t.footer}</div>
+      </footer>
     </div>
   );
 }
+
+export default App;
