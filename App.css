@@ -1,0 +1,408 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #fff8f1 0%, #fff3e7 100%);
+  color: #2f241d;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(163, 114, 79, 0.12);
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 14px;
+  z-index: 10;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #7b4f34, #b97a52);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 25px rgba(123, 79, 52, 0.2);
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brandSub {
+  font-size: 13px;
+  color: #8f6d57;
+}
+
+.nav {
+  display: flex;
+  gap: 22px;
+}
+
+.nav a {
+  color: #6d5141;
+  font-weight: 600;
+}
+
+.langSwitch {
+  display: flex;
+  gap: 8px;
+}
+
+.langSwitch button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #f2e3d5;
+  color: #6e4b37;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.langSwitch button.active {
+  background: #7b4f34;
+  color: #fff;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+  align-items: center;
+  padding: 34px 0 30px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #f8e7d8;
+  color: #8a5e44;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.heroText h1 {
+  font-size: 58px;
+  line-height: 1.02;
+  margin: 0 0 18px;
+  max-width: 620px;
+}
+
+.heroText p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #6f5848;
+  max-width: 580px;
+  margin: 0 0 28px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.primaryBtn {
+  background: #25d366;
+  color: white;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.22);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  background: white;
+  color: #6d4d3b;
+  border: 1px solid rgba(123, 79, 52, 0.15);
+}
+
+.secondaryBtn:hover {
+  transform: translateY(-2px);
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 560px;
+}
+
+.photo {
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(77, 45, 22, 0.14);
+  border: 1px solid rgba(123, 79, 52, 0.1);
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photoBig {
+  width: 78%;
+  height: 430px;
+  margin-left: auto;
+}
+
+.photoSmall {
+  width: 48%;
+  height: 220px;
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+}
+
+.floatingCard {
+  position: absolute;
+  right: 14px;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(123, 79, 52, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 16px 18px;
+  box-shadow: 0 16px 35px rgba(64, 35, 15, 0.12);
+}
+
+.floatingTitle {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.floatingText {
+  color: #7a5f4f;
+  font-size: 14px;
+}
+
+.sectionIntro {
+  margin-bottom: 20px;
+}
+
+.sectionIntro span {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #a06d4d;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.sectionIntro h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.about,
+.services,
+.steps,
+.trust,
+.contact {
+  margin-top: 70px;
+}
+
+.aboutCard,
+.contactCard,
+.trustBox {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(123, 79, 52, 0.1);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 14px 30px rgba(75, 43, 23, 0.06);
+}
+
+.aboutCard p,
+.contactCard p,
+.trustBox p {
+  margin: 0;
+  line-height: 1.8;
+  color: #684f40;
+  font-size: 17px;
+}
+
+.cardGrid,
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.serviceCard,
+.stepCard {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 12px 25px rgba(69, 37, 16, 0.08);
+  border: 1px solid rgba(123, 79, 52, 0.08);
+  transition: 0.2s ease;
+}
+
+.serviceCard:hover,
+.stepCard:hover {
+  transform: translateY(-4px);
+}
+
+.serviceCard h3,
+.stepCard h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.serviceCard p,
+.stepCard p {
+  margin: 0;
+  line-height: 1.7;
+  color: #715847;
+}
+
+.trustLabel {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #a06d4d;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.trustBox h2 {
+  margin: 0 0 14px;
+  font-size: 34px;
+}
+
+.contactButtons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 55px;
+  color: #8d6d59;
+  font-size: 14px;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heroText h1 {
+    font-size: 44px;
+  }
+
+  .heroVisual {
+    min-height: 500px;
+  }
+
+  .cardGrid,
+  .stepsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 16px 14px 50px;
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .heroText h1 {
+    font-size: 34px;
+  }
+
+  .heroText p {
+    font-size: 16px;
+  }
+
+  .photoBig {
+    width: 100%;
+    height: 320px;
+  }
+
+  .photoSmall {
+    display: none;
+  }
+
+  .heroVisual {
+    min-height: auto;
+  }
+
+  .floatingCard {
+    position: static;
+    margin-top: 16px;
+  }
+
+  .cardGrid,
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionIntro h2,
+  .trustBox h2 {
+    font-size: 28px;
+  }
+}
